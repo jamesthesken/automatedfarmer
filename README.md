@@ -1,22 +1,10 @@
-# The Automated Farmer
-Examples from The Automated Farmer blog.
+# The Automated Farmer :herb:
 
-## Running the Examples:
+The Automated Farmer is an open source hydroponic monitoring solution. If you're interested in building your own, please visit the website [here](https://theautomatedfarmer.com).
 
-First, ensure you have Python3 installed.
 
-Then, run in a terminal:
+## Libraries being used:
 
-```
-python3 tcp_example.py
-```
+1. [ESP-DASH](https://github.com/ayushsharma82/ESP-DASH): Used to create the user-interface. A very simple library and very recommended!
+2. [ESPAsyncWiFiManager](https://github.com/alanswx/ESPAsyncWiFiManager): Used to avoid hardcoding WiFi credentials. A huge assistance to internet security!
 
-Finally, modify the lines in `farmclient.ino` saying:
-
-```
-#define STASSID "myRouterName"
-#define STAPSK  "myPassword1234"
-
-```
-
-With your own network credentials.
