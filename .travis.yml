@@ -10,7 +10,7 @@ addons:
   apt:
     packages:
       - xvfb
-
+install: travis_wait mvn install
 script:
   - /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16
 # - /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -screen 0 1400x900x24 -ac +extension GLX +render;
@@ -39,7 +39,6 @@ script:
   - arduino --board esp8266com:esp8266:generic --save-prefs
   - arduino --get-pref sketchbook.path
   - arduino --verify esp8266com:esp8266:generic $TRAVIS_BUILD_DIR/src/automatedFarmer.ino
-
 notifications:
   email:
     on_success: change
