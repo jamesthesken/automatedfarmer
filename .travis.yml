@@ -25,6 +25,8 @@ script:
   - which arduino
   - mkdir -p $HOME/Arduino/libraries
     #- cp -r $TRAVIS_BUILD_DIR $HOME/Arduino/libraries/ESP-DASH
+  - git clone https://github.com/PaulStoffregen/OneWire $HOME/Arduino/libraries/OneWire
+  - git clone https://github.com/milesburton/Arduino-Temperature-Control-Library $HOME/Arduino/libraries/DallasTemperature  
   - git clone https://github.com/bblanchon/ArduinoJson $HOME/Arduino/libraries/ArduinoJson
   - git clone https://github.com/me-no-dev/ESPAsyncTCP $HOME/Arduino/libraries/ESPAsyncTCP
   - git clone https://github.com/me-no-dev/ESPAsyncTCP $HOME/Arduino/libraries/ESPAsyncWebServer
